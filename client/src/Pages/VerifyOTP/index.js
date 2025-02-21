@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import Logo from "../../assets/images/logo.jpg";
+import Logo from "../../assets/images/logo.png";
 import { MyContext } from "../../App";
 import Button from "@mui/material/Button";
 import { Link, useNavigate } from "react-router-dom";
