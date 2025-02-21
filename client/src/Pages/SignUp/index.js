@@ -309,7 +309,7 @@ const SignUp = () => {
             </p>
 
             <h6 className="mt-4 text-center font-weight-bold">
-              Or continue with social account
+              Or continue with social account Ravi
             </h6>
 
             <Button
