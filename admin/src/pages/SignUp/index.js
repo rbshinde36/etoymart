@@ -239,7 +239,7 @@ const SignUp = () => {
         <div className="row">
           <div className="col-md-8 d-flex align-items-center flex-column part1 justify-content-center">
             <h1>
-              BEST UX/UI FASHION{" "}
+              BEST UX/UI FASHION Ravi{" "}
               <span className="text-sky">ECOMMERCE DASHBOARD</span> & ADMIN
               PANEL
             </h1>
