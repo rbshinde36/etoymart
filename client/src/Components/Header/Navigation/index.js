@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 import { MyContext } from "../../../App";
 import CountryDropdown from "../../CountryDropdown";
-import Logo from "../../../assets/images/logo.jpg";
+import Logo from "../../../assets/images/logo.png";
 import { RiLogoutCircleRFill } from "react-icons/ri";
 
 const Navigation = (props) => {

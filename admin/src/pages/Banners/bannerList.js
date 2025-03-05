@@ -57,8 +57,6 @@ const BannersList = () => {
   }, []);
 
   const deleteSlide = (id) => {
-    const userInfo = JSON.parse(localStorage.getItem("user"));
-    if (userInfo?.email === "rinkuv37@gmail.com") {
     context.setProgress(30);
       deleteData(`/api/banners/${id}`).then((res) => {
         context.setProgress(100);
@@ -73,17 +71,6 @@ const BannersList = () => {
 
         });
       });
-
-    }
-
-    else{
-      context.setAlertBox({
-        open: true,
-        error: true,
-        msg: "Only Admin can delete Banner",
-      });
-     }
-    
    
   };
 
