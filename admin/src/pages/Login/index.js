@@ -332,7 +332,7 @@ const Login = () => {
                       onClick={signInWithGoogle}
                     >
                       <img src={googleIcon} width="25px" /> &nbsp; Sign In with
-                      Google
+                      Google A
                     </Button>
                   </div>
                 </>
