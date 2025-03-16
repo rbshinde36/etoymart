@@ -88,7 +88,8 @@ const EditUpload = () => {
   const [product, setProducts] = useState([]);
   const [isImageRemove, setIsImageRemove] = useState(false);
   const [previews, setPreviews] = useState([]);
-
+  const [selectedLocation, setSelectedLocation] = useState([]);
+  const [countryList, setCountryList] = useState([]);
 
   let { id } = useParams();
 
@@ -113,7 +114,7 @@ const EditUpload = () => {
     productRam: [],
     size: [],
     productWeight: [],
-
+    location: "ALL",
   });
 
   const productImages = useRef();
@@ -122,8 +123,19 @@ const EditUpload = () => {
 
   const formdata = new FormData();
 
+  useEffect(() => {
+    const newData = {
+      value: "All",
+      label: "All",
+    };
+    const updatedArray = [...context?.countryList]; // Clone the array to avoid direct mutation
+    updatedArray.unshift(newData); // Prepend data
+    setCountryList(updatedArray);
+  }, [context?.countryList]);
 
-
+  // useEffect(() => {
+  //   formFields.location = context.selectedCountry;
+  // }, [context.selectedCountry]);
 
   useEffect(() => {
     const subCatArr = [];
@@ -177,8 +189,10 @@ const EditUpload = () => {
         productRam: res.productRam,
         size: res.size,
         productWeight: res.productWeight,
+        location: "ALL",
       });
 
+      setSelectedLocation("ALL");
 
       setRatingValue(res.rating);
       console.log(res);
@@ -352,9 +366,9 @@ const EditUpload = () => {
             });
 
 
-          uniqueArray = img_arr.filter(
-            (item, index) => img_arr.indexOf(item) === index
-          );
+            uniqueArray = img_arr.filter(
+              (item, index) => img_arr.indexOf(item) === index
+            );
 
 
           setPreviews(uniqueArray);
@@ -378,27 +392,37 @@ const EditUpload = () => {
   const removeImg = async (indexToRemove, imgUrl, img_id) => {
     const userInfo = JSON.parse(localStorage.getItem("user"));
     if (userInfo?.email === "rinkuv37@gmail.com") {
-      setIsImageRemove(true);
-      const previews_arr = previews;
+    setIsImageRemove(true);
+    const previews_arr = previews;
 
-      const imgIndex = previews_arr.indexOf(imgUrl);
+    const imgIndex = previews_arr.indexOf(imgUrl);
 
-      deleteImages(`/api/products/deleteImage?img=${imgUrl}`).then((res) => {
-        const newArray = previews_arr.filter((_, index) => index !== imgIndex);
-        setPreviews(newArray);
-      });
-    } else {
-      context.setAlertBox({
-        open: true,
-        error: true,
-        msg: "Only Admin can delete Product",
-      });
-    }
+    deleteImages(`/api/products/deleteImage?img=${imgUrl}`).then((res) => {
+      const newArray = previews_arr.filter((_, index) => index !== imgIndex);
+      setPreviews(newArray);
+    });
+  }  else {
+    context.setAlertBox({
+      open: true,
+      error: true,
+      msg: "Only Admin can delete Product",
+    });
+  }
   };
 
+  useEffect(() => {
+    formFields.location = "ALL";
+  }, [context.selectedCountry]);
+
+  const handleChangeLocation = (selectedOptions) => {
+    setSelectedLocation(selectedOptions);
+    console.log(selectedOptions);
+  };
 
   const edit_Product = (e) => {
     e.preventDefault();
+
+    formFields.location = "ALL";
 
     const appendedArray = [...previews, ...uniqueArray];
 
@@ -421,13 +445,10 @@ const EditUpload = () => {
     formdata.append("productRam", formFields.productRam);
     formdata.append("size", formFields.size);
     formdata.append("productWeight", formFields.productWeight);
-
+    formdata.append("location", "ALL");
 
     formFields.images = appendedArray;
-    formFields.location = [{
-      label: "India",
-      value: "IN"
-    }];
+    formFields.location = "ALL";
 
     if (formFields.name === "") {
       context.setAlertBox({
@@ -835,7 +856,7 @@ const EditUpload = () => {
                   </div>
                 </div>
 
-
+              
               </div>
             </div>
           </div>
@@ -845,28 +866,28 @@ const EditUpload = () => {
               <h5 class="mb-4">Media And Published</h5>
 
               <div className="imgUploadBox d-flex align-items-center">
-                {previews?.length !== 0 &&
-                  previews?.map((img, index) => {
-                    return (
-                      <div className="uploadBox" key={index}>
-                        <span
-                          className="remove"
-                          disabled={isImageRemove === true ? true : false}
-                          onClick={() => removeImg(index, img)}
-                        >
-                          <IoCloseSharp />
-                        </span>
-                        <div className="box">
-                          <LazyLoadImage
-                            alt={"image"}
-                            effect="blur"
-                            className="w-100"
-                            src={`${process.env.REACT_APP_BASE_URL}/download/${img}`}
-                          />
-                        </div>
+              {previews?.length !== 0 &&
+                previews?.map((img, index) => {
+                  return (
+                    <div className="uploadBox" key={index}>
+                      <span
+                        className="remove"
+                        disabled={isImageRemove === true ? true : false}
+                        onClick={() => removeImg(index, img)}
+                      >
+                        <IoCloseSharp />
+                      </span>
+                      <div className="box">
+                        <LazyLoadImage
+                          alt={"image"}
+                          effect="blur"
+                          className="w-100"
+                          src={`${process.env.REACT_APP_BASE_URL}/download/${img}`}
+                        />
                       </div>
-                    );
-                  })}
+                    </div>
+                  );
+                })}
 
 
                 <div className="uploadBox">

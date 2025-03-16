@@ -27,7 +27,9 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-
+import axios from "axios";
+import CountryDropdown from "../../components/CountryDropdown";
+import Select2 from "react-select";
 
 //breadcrumb code
 const StyledBreadcrumb = styled(Chip)(({ theme }) => {
@@ -86,7 +88,8 @@ const ProductUpload = () => {
 
   const [isDisable, setIsDisable] = useState(true);
 
-
+  const [selectedLocation, setSelectedLocation] = useState([]);
+  const [countryList, setCountryList] = useState([]);
   const [isImageRemove, setIsImageRemove] = useState(false);
   const history = useNavigate();
 
@@ -109,6 +112,7 @@ const ProductUpload = () => {
     productRam: [],
     size: [],
     productWeight: [],
+    location: "ALL",
   });
 
   const productImages = useRef();
@@ -117,7 +121,15 @@ const ProductUpload = () => {
 
   const formdata = new FormData();
 
-
+  useEffect(() => {
+    const newData = {
+      value:'All',
+      label:'All'
+    };
+    const updatedArray = [...context?.countryList]; // Clone the array to avoid direct mutation
+    updatedArray.unshift(newData); // Prepend data
+    setCountryList(updatedArray);
+  }, [context?.countryList]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -144,7 +156,9 @@ const ProductUpload = () => {
     });
   }, []);
 
-
+  useEffect(() => {
+    formFields.location = "ALL";
+  }, [context.selectedCountry]);
 
   useEffect(() => {
     const subCatArr = [];
@@ -408,12 +422,9 @@ const ProductUpload = () => {
     formdata.append("productRam", formFields.productRam);
     formdata.append("size", formFields.size);
     formdata.append("productWeight", formFields.productWeight);
+    formdata.append("location", formFields.location);
 
-
-    formFields.location = [{
-      label:"India",
-      value:"IN"
-    }];
+    formFields.location = "ALL";
 
     formFields.images = appendedArray;
 
@@ -529,8 +540,6 @@ const ProductUpload = () => {
 
     setIsLoading(true);
 
-    console.log(formFields)
-
     postData("/api/products/create", formFields).then((res) => {
       context.setAlertBox({
         open: true,
@@ -546,6 +555,10 @@ const ProductUpload = () => {
   };
 
 
+  const handleChangeLocation = (selectedOptions) => {
+    setSelectedLocation(selectedOptions);
+    console.log(selectedOptions);
+  };
 
   return (
     <>

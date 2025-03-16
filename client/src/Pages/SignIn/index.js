@@ -326,7 +326,7 @@ const SignIn = () => {
                   variant="outlined"
                   onClick={signInWithGoogle}
                 >
-                  <img src={GoogleImg} /> Sign In with Google A
+                  <img src={GoogleImg} /> Sign In with Google
                 </Button>
               </>
             ) : (

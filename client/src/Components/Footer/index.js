@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <>
-
+      
       <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
         <div className="container">
           <div className="row">
@@ -77,29 +77,146 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="linksWrap pt-5">
+          <div className="row mt-5 linksWrap">
+            <div className="col">
+              <h5>FRUIT & VEGETABLES</h5>
+              <ul>
+                <li>
+                  <Link to="#">Fresh Vegetables</Link>
+                </li>
+                <li>
+                  <Link to="#">Herbs & Seasonings</Link>
+                </li>
+                <li>
+                  <Link to="#">Fresh Fruits</Link>
+                </li>
+                <li>
+                  <Link to="#">Cuts & Sprouts</Link>
+                </li>
+                <li>
+                  <Link to="#">Exotic Fruits & Veggies</Link>
+                </li>
+                <li>
+                  <Link to="#">Packaged Produce</Link>
+                </li>
+                <li>
+                  <Link to="#">Party Trays</Link>
+                </li>
+              </ul>
+            </div>
 
-            <ul className="list list-inline text-center m-auto">
-              <li className="list-inline-item">
-                <Link to="#">About Us</Link>
-              </li>
+            <div className="col">
+              <h5>BREAKFAST & DAIRY</h5>
+              <ul>
+                <li>
+                  <Link to="#">Fresh Vegetables</Link>
+                </li>
+                <li>
+                  <Link to="#">Herbs & Seasonings</Link>
+                </li>
+                <li>
+                  <Link to="#">Fresh Fruits</Link>
+                </li>
+                <li>
+                  <Link to="#">Cuts & Sprouts</Link>
+                </li>
+                <li>
+                  <Link to="#">Exotic Fruits & Veggies</Link>
+                </li>
+                <li>
+                  <Link to="#">Packaged Produce</Link>
+                </li>
+                <li>
+                  <Link to="#">Party Trays</Link>
+                </li>
+              </ul>
+            </div>
 
-              <li className="list-inline-item">
-                <Link to="#">Terms & Condition</Link>
-              </li>
-              <li className="list-inline-item">
-                <Link to="#">Privacy Policy</Link>
-              </li>
-              <li className="list-inline-item">
-                <Link to="#">Contact Us</Link>
-              </li>
-            </ul>
+            <div className="col">
+              <h5>MEAT & SEAFOOD</h5>
+              <ul>
+                <li>
+                  <Link to="#">Fresh Vegetables</Link>
+                </li>
+                <li>
+                  <Link to="#">Herbs & Seasonings</Link>
+                </li>
+                <li>
+                  <Link to="#">Fresh Fruits</Link>
+                </li>
+                <li>
+                  <Link to="#">Cuts & Sprouts</Link>
+                </li>
+                <li>
+                  <Link to="#">Exotic Fruits & Veggies</Link>
+                </li>
+                <li>
+                  <Link to="#">Packaged Produce</Link>
+                </li>
+                <li>
+                  <Link to="#">Party Trays</Link>
+                </li>
+              </ul>
+            </div>
 
+            <div className="col">
+              <h5>BEVERAGES</h5>
+              <ul>
+                <li>
+                  <Link to="#">Fresh Vegetables</Link>
+                </li>
+                <li>
+                  <Link to="#">Herbs & Seasonings</Link>
+                </li>
+                <li>
+                  <Link to="#">Fresh Fruits</Link>
+                </li>
+                <li>
+                  <Link to="#">Cuts & Sprouts</Link>
+                </li>
+                <li>
+                  <Link to="#">Exotic Fruits & Veggies</Link>
+                </li>
+                <li>
+                  <Link to="#">Packaged Produce</Link>
+                </li>
+                <li>
+                  <Link to="#">Party Trays</Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="col">
+              <h5>BREADS & BAKERY</h5>
+              <ul>
+                <li>
+                  <Link to="#">Fresh Vegetables</Link>
+                </li>
+                <li>
+                  <Link to="#">Herbs & Seasonings</Link>
+                </li>
+                <li>
+                  <Link to="#">Fresh Fruits</Link>
+                </li>
+                <li>
+                  <Link to="#">Cuts & Sprouts</Link>
+                </li>
+                <li>
+                  <Link to="#">Exotic Fruits & Veggies</Link>
+                </li>
+                <li>
+                  <Link to="#">Packaged Produce</Link>
+                </li>
+                <li>
+                  <Link to="#">Party Trays</Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div className="d-flex align-items-center justify-content-center">
-
-            <ul className="list list-inline py-3 pt-3 m-auto socials">
+          <div className="copyright mt-3 pt-3 pb-3 d-flex">
+            <p className="mb-0">Copyright 2024. All rights reserved</p>
+            <ul className="list list-inline ml-auto mb-0 socials">
               <li className="list-inline-item">
                 <Link to="#">
                   <FaFacebookF />
@@ -118,10 +235,6 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
-
-          <div className="copyright mt-3 pt-3 pb-3 text-center">
-            <p className="mb-0">Copyright 2024. All rights reserved</p>
           </div>
         </div>
       </footer>

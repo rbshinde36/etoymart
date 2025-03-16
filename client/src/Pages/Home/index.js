@@ -48,7 +48,7 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     context.setisHeaderFooterShow(true);
-    setselectedCat(context.categoryData[0]?.name);
+    setselectedCat(context.categoryData[0]?.id);
 
     const location = localStorage.getItem("location");
 
@@ -88,7 +88,7 @@ const Home = () => {
 
   useEffect(() => {
     if (context.categoryData[0] !== undefined) {
-      setselectedCat(context.categoryData[0].name);
+      setselectedCat(context.categoryData[0].id);
     }
 
     if (context.categoryData?.length !== 0) {
@@ -115,7 +115,7 @@ const Home = () => {
       setIsLoading(true);
       const location = localStorage.getItem("location");
       fetchDataFromApi(
-        `/api/products/catName?catName=${selectedCat}&location=${location}`
+        `/api/products/catId?catId=${selectedCat}&location=${location}`
       ).then((res) => {
         setFilterData(res.products);
         setIsLoading(false);
@@ -204,7 +204,7 @@ const Home = () => {
                         <Tab
                           className="item"
                           label={item.name}
-                          onClick={() => selectCat(item.name)}
+                          onClick={() => selectCat(item.id)}
                         />
                       );
                     })}

@@ -289,7 +289,7 @@ router.post(`/signin`, async (req, res) => {
   try {
     const existingUser = await User.findOne({ email: email });
     if (!existingUser) {
-      res.status(404).json({ error: true, msg: "User not found A!" });
+      res.status(404).json({ error: true, msg: "User not found!" });
       return;
     }
 

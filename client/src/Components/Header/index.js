@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import Button from "@mui/material/Button";
-
+import CountryDropdown from "../CountryDropdown";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import SearchBox from "./SearchBox";
@@ -160,10 +160,10 @@ const Header = () => {
                 </div>
 
                 <div className="col-sm-10 d-flex align-items-center part2">
-
+                 
 
                   <div
-                    className={`headerSearchWrapper ${
+                    className={`headerSearchWrapper m-auto ${
                       isOpenSearch === true && "open"
                     }`}
                   >

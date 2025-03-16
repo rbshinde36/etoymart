@@ -86,16 +86,10 @@ const productSchema = mongoose.Schema({
             default: null,
         }
     ],
-    location: [
-    {
-      value: {
+    location: {
         type: String,
-      },
-      label: {
-        type: String,
-      }
+        default: 'ALL',
     },
-  ],
     dateCreated: {
         type: Date,
         default: Date.now,

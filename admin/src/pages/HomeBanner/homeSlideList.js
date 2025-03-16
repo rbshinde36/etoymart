@@ -57,19 +57,29 @@ const HomeSlidesList = () => {
   }, []);
 
   const deleteSlide = (id) => {
-    context.setProgress(30);
-    deleteData(`/api/homeBanner/${id}`).then((res) => {
-      context.setProgress(100);
-      fetchDataFromApi("/api/homeBanner").then((res) => {
-        setSlideList(res);
+    const userInfo = JSON.parse(localStorage.getItem("user"));
+    if (userInfo?.email === "rinkuv37@gmail.com") {
+      context.setProgress(30);
+      deleteData(`/api/homeBanner/${id}`).then((res) => {
         context.setProgress(100);
-        context.setProgress({
-          open: true,
-          error: false,
-          msg: "Slide Deleted!",
+        fetchDataFromApi("/api/homeBanner").then((res) => {
+          setSlideList(res);
+          context.setProgress(100);
+          context.setProgress({
+            open: true,
+            error: false,
+            msg: "Slide Deleted!",
+          });
         });
       });
-    });
+    }
+    else{
+      context.setAlertBox({
+        open: true,
+        error: true,
+        msg: "Only Admin can delete slide",
+      });
+     }
   };
 
   return (

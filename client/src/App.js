@@ -97,9 +97,10 @@ function App() {
       setWindowWidth(window.innerWidth);
     };
 
-    localStorage.setItem("location", "IN");
     const location = localStorage.getItem("location");
-    setselectedCountry(location);
+    localStorage.setItem("location", "ALL");
+    
+
     window.addEventListener("resize", handleResize);
 
     return () => {

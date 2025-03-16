@@ -12,7 +12,6 @@ import { IoIosTimer } from "react-icons/io";
 import Button from "@mui/material/Button";
 import { Chart } from "react-google-charts";
 
-
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
@@ -676,7 +675,7 @@ const Dashboard = () => {
                   }} // Set tooltip background and text color
                   labelStyle={{ color: "yellow" }} // Label text color
                   itemStyle={{ color: "cyan" }} // Set color for individual items in the tooltip
-                  cursor={{ fill: "white" }} // Customize the tooltip cursor background on hover abce
+                  cursor={{ fill: "white" }} // Customize the tooltip cursor background on hover
                 />
                 <Legend />
                 <CartesianGrid
