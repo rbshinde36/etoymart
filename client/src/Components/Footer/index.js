@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-6">
               <p className="text-white mb-1">
-                $20 discount for your first order
+                40% discount for your first order
               </p>
               <h3 className="text-white">Join our newsletter and get...</h3>
               <p className="text-light">
@@ -52,14 +52,14 @@ const Footer = () => {
               <span>
                 <LuShirt />
               </span>
-              <span className="ml-2">Everyday fresh products</span>
+              <span className="ml-2">Everyday Best products</span>
             </div>
 
             <div className="col d-flex align-items-center">
               <span>
                 <TbTruckDelivery />
               </span>
-              <span className="ml-2">Free delivery for order over $70</span>
+              <span className="ml-2">Free delivery for order over Rs. 5000/-</span>
             </div>
 
             <div className="col d-flex align-items-center">
@@ -79,75 +79,75 @@ const Footer = () => {
 
           <div className="row mt-5 linksWrap">
             <div className="col">
-              <h5>FRUIT & VEGETABLES</h5>
+              <h5>Remote Controlled Car & Aeroplane</h5>
               <ul>
                 <li>
-                  <Link to="#">Fresh Vegetables</Link>
+                  <Link to="#">Formula One Speed Car</Link>
                 </li>
                 <li>
-                  <Link to="#">Herbs & Seasonings</Link>
+                  <Link to="#">Super Power Car</Link>
                 </li>
                 <li>
-                  <Link to="#">Fresh Fruits</Link>
+                  <Link to="#">Super Car - Door Func.</Link>
                 </li>
                 <li>
-                  <Link to="#">Cuts & Sprouts</Link>
+                  <Link to="#">Flying Spaceman Astronaut</Link>
                 </li>
                 <li>
-                  <Link to="#">Exotic Fruits & Veggies</Link>
+                  <Link to="#">Flying Cartoon Aircraft</Link>
                 </li>
                 <li>
-                  <Link to="#">Packaged Produce</Link>
+                  <Link to="#">Flying F35 Remote Contol Fighter Plane</Link>
                 </li>
                 <li>
-                  <Link to="#">Party Trays</Link>
+                  <Link to="#">Flying F35 Fighter Plane</Link>
                 </li>
               </ul>
             </div>
 
             <div className="col">
-              <h5>BREAKFAST & DAIRY</h5>
+              <h5>Electronic Toy</h5>
               <ul>
                 <li>
-                  <Link to="#">Fresh Vegetables</Link>
+                  <Link to="#">Interesting Duckling</Link>
                 </li>
                 <li>
-                  <Link to="#">Herbs & Seasonings</Link>
+                  <Link to="#">Print Camera</Link>
                 </li>
                 <li>
-                  <Link to="#">Fresh Fruits</Link>
+                  <Link to="#">Balance Boy</Link>
                 </li>
                 <li>
-                  <Link to="#">Cuts & Sprouts</Link>
+                  <Link to="#">Baby Camera</Link>
                 </li>
                 <li>
-                  <Link to="#">Exotic Fruits & Veggies</Link>
+                  <Link to="#">City Truck</Link>
                 </li>
                 <li>
-                  <Link to="#">Packaged Produce</Link>
+                  <Link to="#">Dancing Baby Girl</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="#">Party Trays</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
             <div className="col">
-              <h5>MEAT & SEAFOOD</h5>
+              <h5>Puzzle & Gun Toy</h5>
               <ul>
                 <li>
-                  <Link to="#">Fresh Vegetables</Link>
+                  <Link to="#">Thunder Strike 2 in 1 Gun</Link>
                 </li>
                 <li>
-                  <Link to="#">Herbs & Seasonings</Link>
+                  <Link to="#">Face Changing Game Bell</Link>
                 </li>
                 <li>
-                  <Link to="#">Fresh Fruits</Link>
+                  <Link to="#">Face Changing Game Big</Link>
                 </li>
                 <li>
-                  <Link to="#">Cuts & Sprouts</Link>
+                  <Link to="#">Paw Petrol Tower Set</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="#">Exotic Fruits & Veggies</Link>
                 </li>
                 <li>
@@ -155,26 +155,26 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="#">Party Trays</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
             <div className="col">
-              <h5>BEVERAGES</h5>
+              <h5>Wooden Toy</h5>
               <ul>
                 <li>
-                  <Link to="#">Fresh Vegetables</Link>
+                  <Link to="#">Small Wooden Jig Saw Puzzle</Link>
                 </li>
                 <li>
-                  <Link to="#">Herbs & Seasonings</Link>
+                  <Link to="#">Animal Wooden Jig Saw Puzzle</Link>
                 </li>
                 <li>
-                  <Link to="#">Fresh Fruits</Link>
+                  <Link to="#">Animal Long Wooden Jig Saw Puzzle</Link>
                 </li>
                 <li>
-                  <Link to="#">Cuts & Sprouts</Link>
+                  <Link to="#">Animal & Big Wooden Jig Saw Puzzle</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="#">Exotic Fruits & Veggies</Link>
                 </li>
                 <li>
@@ -182,24 +182,24 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="#">Party Trays</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
             <div className="col">
-              <h5>BREADS & BAKERY</h5>
+              <h5>TOYS</h5>
               <ul>
                 <li>
-                  <Link to="#">Fresh Vegetables</Link>
+                  <Link to="#">Soft Toys</Link>
                 </li>
                 <li>
-                  <Link to="#">Herbs & Seasonings</Link>
+                  <Link to="#">Musical Toys</Link>
                 </li>
                 <li>
-                  <Link to="#">Fresh Fruits</Link>
+                  <Link to="#">Building Block</Link>
                 </li>
-                <li>
-                  <Link to="#">Cuts & Sprouts</Link>
+                {/* <li>
+                  <Link to="#">Gun Toy</Link>
                 </li>
                 <li>
                   <Link to="#">Exotic Fruits & Veggies</Link>
@@ -209,7 +209,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="#">Party Trays</Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -218,7 +218,7 @@ const Footer = () => {
             <p className="mb-0">Copyright 2024. All rights reserved</p>
             <ul className="list list-inline ml-auto mb-0 socials">
               <li className="list-inline-item">
-                <Link to="#">
+                <Link to="https://www.facebook.com/profile.php?id=61571994485281">
                   <FaFacebookF />
                 </Link>
               </li>
@@ -230,7 +230,7 @@ const Footer = () => {
               </li>
 
               <li className="list-inline-item">
-                <Link to="#">
+                <Link to="https://www.instagram.com/etoy_mart/">
                   <FaInstagram />
                 </Link>
               </li>

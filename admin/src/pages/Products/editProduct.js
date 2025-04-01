@@ -391,7 +391,7 @@ const EditUpload = () => {
 
   const removeImg = async (indexToRemove, imgUrl, img_id) => {
     const userInfo = JSON.parse(localStorage.getItem("user"));
-    if (userInfo?.email === "rinkuv37@gmail.com") {
+    if (userInfo?.email === "rbshinde36@gmail.com") {
     setIsImageRemove(true);
     const previews_arr = previews;
 
